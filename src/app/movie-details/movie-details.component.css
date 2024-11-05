@@ -1,0 +1,78 @@
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  button.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* movie-details.component.css */
+  .movie-details {
+    margin-top: 20px;
+  }
+  
+  .movie-title {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .about-movie-heading {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .movie-info {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .poster {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .cast-heading {
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .cast-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .cast-item {
+    width: 120px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .actor-photo-round {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .actor-name {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .btn-save {
+    background-color: #007bff;
+  }

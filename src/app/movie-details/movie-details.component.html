@@ -1,0 +1,21 @@
+<!-- movie-details.component.html -->
+<div *ngIf="movieDetails" class="movie-details">
+    <h2 class="movie-title">{{ movieDetails.Title }}</h2>
+    <h3 class="about-movie-heading">About Movie</h3>
+    <p class="movie-info">Year: {{ movieDetails.Year }}</p>
+    <p class="movie-info">Genre: {{ movieDetails.Genre }}</p>
+    <p class="movie-info">Director: {{ movieDetails.Director }}</p>
+    <p class="movie-info">Plot: {{ movieDetails.Plot }}</p>
+    <img [src]="movieDetails.Poster" alt="Movie Poster" class="poster">
+  
+    <!-- Display actors if available in the TMDB response -->
+    <h3 class="cast-heading">Cast</h3>
+    <div class="cast-list">
+      <div *ngFor="let actor of movieDetails?.actors.slice(0, 5)" class="cast-item">
+        <img [src]="getImageUrl(actor?.profile_path)" alt="Actor Photo" class="actor-photo-round">
+        <p class="actor-name">{{ actor?.name }}</p>
+      </div>
+    </div>
+  
+    <button class="btn btn-save" (click)="onSaveMovie()">Save</button>
+</div>

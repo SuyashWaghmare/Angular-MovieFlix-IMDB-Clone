@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="search-section">
+    <label for="movieName" class="input-label">Movie Name:</label>
+    <input type="text" id="movieName" [(ngModel)]="movieName" class="input-field">
+    <button class="btn search-btn" (click)="movieDetailsComponent.fetchMovieDetails(movieName)">Search</button>
+  </div>
+
+<div class="container">
+  <app-movie-details [movieDetails]="movieDetails" (saveMovie)="savedMoviesComponent.saveMovie($event)"></app-movie-details>
+
+  <app-saved-movies [savedMovies]="savedMovies"></app-saved-movies> 
+</div>
+
+
+  <div class="saved-movies-section">
+    <button class="btn saved-movies-btn" (click)="showSavedMovies()">Saved Movies</button>
+    <div *ngIf="showSavedMoviesFlag" class="saved-movies-container">
+      <app-saved-movies [savedMovies]="savedMovies"></app-saved-movies>
+    </div>
+  </div>
+</div>

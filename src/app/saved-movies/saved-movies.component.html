@@ -1,0 +1,21 @@
+<div *ngIf="savedMovies.length > 0" class="saved-movies">
+  <h2 class="saved-movies-heading">Saved Movies</h2>
+  <div class="saved-movies-container">
+    <div class="row">
+      <div class="col-2" *ngFor="let movie of savedMovies.slice(0, 6); let i = index" (click)="fetchMovieDetails(movie)">
+        <div class="saved-movie-item">
+          <img [src]="movie.Poster" alt="Movie Poster" class="poster">
+          <p class="movie-name">{{ movie.Title }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row" *ngFor="let chunk of savedMovies.slice(6) | chunk: 6">
+      <div class="col-2" *ngFor="let movie of chunk" (click)="fetchMovieDetails(movie)">
+        <div class="saved-movie-item">
+          <img [src]="movie.Poster" alt="Movie Poster" class="poster">
+          <p class="movie-name">{{ movie.Title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
